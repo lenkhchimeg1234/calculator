@@ -1,0 +1,66 @@
+.container {
+  width: 500px;
+  height: 800px;
+  border: 2px solid black;
+  border-radius: 90px;
+  background-color: rgb(219, 238, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.button1 {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 80px;
+  background-color: rgb(171, 204, 233);
+  font-size: 24px;
+}
+.button2 {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 80px;
+  color: white;
+  background-color: rgb(85, 92, 99);
+  font-size: 24px;
+}
+.toonuud {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 15px;
+}
+.result {
+  width: 400px;
+  height: 200px;
+  border: 1px solid grey;
+  border-radius: 40px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 40px;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+.button1:hover {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 80px;
+  background-color: rgb(171, 204, 233);
+  font-size: 24px;
+}
+.button2:hover {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 80px;
+  color: white;
+  background-color: rgb(85, 92, 99);
+  font-size: 24px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <script>
+      const element = [
+        "AC",
+        "+/-",
+        "%",
+        "/",
+        7,
+        8,
+        9,
+        "x",
+        4,
+        5,
+        6,
+        "-",
+        1,
+        2,
+        3,
+        "+",
+        "C",
+        0,
+        ".",
+        "=",
+      ];
+
+      const container = document.createElement("div");
+      const toonuud = document.createElement("div");
+      const result = document.createElement("div");
+
+      for (let i = 0; i < element.length; i++) {
+        const elements = document.createElement("button");
+        elements.innerHTML = element[i];
+        if (typeof element[i] === "number") {
+          elements.classList.add("button1");
+        } else {
+          elements.classList.add("button2");
+        }
+        toonuud.appendChild(elements);
+
+        if (element[i] === "=") {
+        } else if (element[i] === "AC") {
+        } else if (element[i] === "C") {
+        } else if (element[i] === "%") {
+        } else {
+          function handleClick() {
+            result.innerHTML = result.innerHTML + element[i];
+          }
+          elements.onclick = handleClick;
+        }
+        // elements.addEventListener("click", function () {
+        //   result.innerHTML = result.innerHTML + element[i];
+        // });
+      }
+
+      result.classList.add("result");
+      container.classList.add("container");
+      toonuud.classList.add("toonuud");
+      container.appendChild(result);
+      container.appendChild(toonuud);
+      document.body.appendChild(container);
+    </script>
+  </body>
+</html>
