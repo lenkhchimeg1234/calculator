@@ -45,7 +45,7 @@
   align-items: end;
   font-size: 40px;
   box-sizing: border-box;
-  padding-right: 20px;
+  padding: 10px 20px;
 }
 .button1:hover {
   width: 80px;
