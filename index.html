@@ -65,9 +65,24 @@
               result.innerHTML.length - 1
             );
           } else if (element[i] === "+/-") {
-            console.log(result.innerHTML);
-            result.innerHTML = String(-Number(result.innerHTML.slice(["+/-"])));
-          } else {
+            let minus = result.innerHTML;
+            const numbers = minus.match(/\d+(\.\d+)?/g);
+            console.log(numbers);
+            if (!numbers) return;
+
+            const lastNumber = numbers[numbers.length - 1];
+
+            result.innerHTML =
+              minus.slice(0, minus.lastIndexOf(lastNumber)) +
+              `(-${lastNumber})`;
+          }
+          if (result.innerHTML[result.innerHTML.length - 1] === "%") {
+            result.innerHTML = Number(result.innerHTML.split("%")[0]) / 100;
+          }
+
+          //   result.innerHTML = String(-Number(result.innerHTML.slice(["+/-"])));
+          // }
+          else {
             result.innerHTML = result.innerHTML + element[i];
           }
         }

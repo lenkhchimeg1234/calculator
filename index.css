@@ -52,7 +52,7 @@
   height: 80px;
   border: 2px solid black;
   border-radius: 80px;
-  background-color: rgb(171, 204, 233);
+  background-color: rgb(167, 205, 237);
   font-size: 24px;
 }
 .button2:hover {
@@ -61,6 +61,7 @@
   border: 2px solid black;
   border-radius: 80px;
   color: white;
-  background-color: rgb(85, 92, 99);
+  background-color: rgb(80, 88, 97);
   font-size: 24px;
 }
+s
