@@ -9,6 +9,7 @@
   <body>
     <script>
       const element = [
+        // "",
         "AC",
         "+/-",
         "%",
@@ -58,6 +59,7 @@
             //   result.innerHTML = Number(result.innerHTML.split("%")[0]) / 100;
             // }
           } else if (element[i] === "AC") {
+            console.log("hi");
             result.innerHTML = "";
           } else if (element[i] === "C") {
             result.innerHTML = result.innerHTML.slice(
@@ -75,8 +77,7 @@
             result.innerHTML =
               minus.slice(0, minus.lastIndexOf(lastNumber)) +
               `(-${lastNumber})`;
-          }
-          if (result.innerHTML[result.innerHTML.length - 1] === "%") {
+          } else if (result.innerHTML[result.innerHTML.length - 1] === "%") {
             result.innerHTML = Number(result.innerHTML.split("%")[0]) / 100;
           }
 
